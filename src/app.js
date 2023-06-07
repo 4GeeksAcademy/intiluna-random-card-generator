@@ -10,7 +10,8 @@ window.onload = function() {
   console.log("Hello Random card Generator");
 
   let myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
-  let palos = ["corazon", "diamante", "espada", "trebol"];
+  //let palosName = ["heart", "diamond", "spade", "club"];
+  let palos = ["♦", "♥", "♠", "♣"];
 
   //console.log(myNumbers);
   //console.log(palos);
@@ -36,4 +37,19 @@ window.onload = function() {
   myTop.innerHTML = myRandomPalo;
   myNum.innerHTML = myRandomNumber;
   myBottom.innerHTML = myRandomPalo;
+
+  // Change colors for symbols
+  // Define colors logic
+  const myColor = {
+    "♥": "red",
+    "♦": "red",
+    "♠": "black",
+    "♣": "black"
+  };
+
+  //console.log(myColor["♦"]);
+
+  //Manipulate DOM
+  myTop.style.color = myColor[myRandomPalo];
+  myBottom.style.color = myColor[myRandomPalo];
 };

@@ -1,1 +1,18 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+.card {
+  height: 300px;
+  width: 200px;
+}
+.top {
+  font-size: 300%;
+  margin-right: auto;
+}
+.bottom {
+  font-size: 300%;
+  transform: rotate(180deg);
+  margin-left: auto;
+}
+.number {
+  font-size: 600%;
+}
