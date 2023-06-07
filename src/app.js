@@ -7,5 +7,33 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  console.log("Hello Rigo from the console!");
+  console.log("Hello Random card Generator");
+
+  let myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
+  let palos = ["corazon", "diamante", "espada", "trebol"];
+
+  //console.log(myNumbers);
+  //console.log(palos);
+
+  //create random number for each element
+  function getRandom(anArray) {
+    let myRandom = Math.floor(Math.random() * anArray.length);
+    return anArray[myRandom];
+  }
+
+  //console.log(getRandom(myNumbers) + getRandom(palos));
+  // create a random value to call function just once per palo
+  let myRandomPalo = getRandom(palos);
+  let myRandomNumber = getRandom(myNumbers);
+
+  //Asign  random values to html DOM
+  //a. get target element
+  let myTop = document.getElementById("top");
+  let myNum = document.getElementById("number");
+  let myBottom = document.getElementById("bottom");
+  //b. manipulate element
+  //console.log(myTop);
+  myTop.innerHTML = myRandomPalo;
+  myNum.innerHTML = myRandomNumber;
+  myBottom.innerHTML = myRandomPalo;
 };
